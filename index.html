@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#4CAF50">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Sistema de Estudio - Sistemas Informáticos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Cuestionario de Sistemas Informáticos</h1>
+        </header>
+
+        <div class="controls">
+            <div class="controls-group">
+                <label for="num-questions">Número de preguntas:</label>
+                <select id="num-questions">
+                    <option value="5">5</option>
+                    <option value="10" selected>10</option>
+                    <option value="20">20</option>
+                    <option value="30">30</option>
+                    <option value="all">Todas</option>
+                </select>
+            </div>
+            <div class="controls-group">
+                <button id="start-btn" class="btn">Iniciar Cuestionario</button>
+                <button id="next-btn" class="btn" disabled>Siguiente Pregunta</button>
+            </div>
+        </div>
+
+        <div id="quiz-container" style="display: none;">
+            <div class="progress-bar">
+                <div id="progress" class="progress"></div>
+            </div>
+            
+            <div class="card">
+                <div id="question-number">Pregunta 1 de 10</div>
+                <div id="question-text" class="question"></div>
+                <ul id="options-list" class="options"></ul>
+                <div id="feedback" class="feedback"></div>
+                <div id="explanation" class="explanation"></div>
+            </div>
+        </div>
+
+        <div id="start-screen" class="card">
+            <h2>¡Bienvenido al Sistema de Estudio!</h2>
+            <p>Esta aplicación te ayudará a estudiar para el examen de Sistemas Informáticos.</p>
+            <p>Selecciona el número de preguntas y haz clic en "Iniciar Cuestionario" para comenzar.</p>
+        </div>
+
+        <div id="result-container" class="result-container" style="display: none;">
+            <h2>Resultados</h2>
+            <div id="score" class="score"></div>
+            <div id="review-container">
+                <button id="review-btn" class="btn">Revisar Respuestas</button>
+                <button id="restart-btn" class="btn">Reiniciar Cuestionario</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
